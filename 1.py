@@ -1,16 +1,12 @@
-# This is a sample Python script.
+zakupy = []
+ilosc_produktow = int(input("Ile produktów chcesz dodać?: "))
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+for i in range(ilosc_produktow):
+    nowy_produkt = input(f"Produkt {i+1}: ")
+    zakupy.append(nowy_produkt)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(f"Lista: {zakupy}")
+print(f"Liczba produktow: {len(zakupy)}")
+produkt_do_usuniecia = input("Produktu do usuniecia: ")
+zakupy.remove(produkt_do_usuniecia)
+print(f"Nowa lista: {zakupy}")
